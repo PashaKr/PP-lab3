@@ -12,7 +12,7 @@ class MemoryTestApp:
         self.sequence = []
         self.user_input = []
         self.current_index = 0
-        self.num_digits = 5
+        self.num_digits = 3
         self.start_time = None
         self.end_time = None
 
