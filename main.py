@@ -17,23 +17,23 @@ class MemoryTestApp:
         self.end_time = None
 
         # Create widgets
-        self.label = tk.Label(root, text="Press Start to begin!", font=("Arial", 14))
+        self.label = tk.Label(root, text="Press Start to begin!", font=("Times New Roman", 14))
         self.label.pack(pady=20)
 
-        self.start_button = tk.Button(root, text="Start", font=("Arial", 12), command=self.start_game)
+        self.start_button = tk.Button(root, text="Start", font=("Times New Roman", 12), command=self.start_game)
         self.start_button.pack(pady=10)
 
-        self.input_entry = tk.Entry(root, font=("Arial", 12), state="disabled")
+        self.input_entry = tk.Entry(root, font=("Times New Roman", 12), state="disabled")
         self.input_entry.pack(pady=10)
         self.input_entry.bind("<Return>", self.check_input)
 
-        self.num_digits_label = tk.Label(root, text="Number of digits:", font=("Arial", 12))
+        self.num_digits_label = tk.Label(root, text="Number of digits:", font=("Times New Roman", 12))
         self.num_digits_label.pack(pady=10)
 
-        self.num_digits_spinbox = tk.Spinbox(root, from_=3, to=10, font=("Arial", 12), width=5, command=self.update_num_digits)
+        self.num_digits_spinbox = tk.Spinbox(root, from_=3, to=10, font=("Times New Roman", 12), width=5, command=self.update_num_digits)
         self.num_digits_spinbox.pack(pady=10)
 
-        self.quit_button = tk.Button(root, text="Quit", font=("Arial", 12), command=root.quit)
+        self.quit_button = tk.Button(root, text="Quit", font=("Times New Roman", 12), command=root.quit)
         self.quit_button.pack(pady=10)
 
         # Menu setup
@@ -68,7 +68,7 @@ class MemoryTestApp:
         self.root.after(2000, self.clear_label)
 
     def clear_label(self):
-        self.label.config(text="Now, enter the sequence:")
+        self.label.config(text="Enter the sequence:")
         self.input_entry.config(state="normal")
         self.input_entry.focus()
         self.start_time = time.time()
